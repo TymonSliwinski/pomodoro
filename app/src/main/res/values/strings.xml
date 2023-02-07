@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pomodoro</string>
+    <string name="save">SAVE</string>
+    <string name="delete">DELETE</string>
+    <string name="details_hint_title">title</string>
+    <string name="details_hint_work_time">work time</string>
+    <string name="details_hint_break_time">break time</string>
+    <string name="details_hint_intervals">number of intervals</string>
+    <string name="quit">QUIT</string>
+</resources>

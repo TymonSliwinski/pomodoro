@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/schedule_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.75"
+        android:layout_marginTop="28dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="text"
+        android:hint="@string/details_hint_title"
+        />
+
+    <EditText
+        android:id="@+id/schedule_work_time"
+        android:inputType="number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_weight="0.75"
+        android:gravity="center"
+
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/schedule_title"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/schedule_title"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_title"
+        android:hint="@string/details_hint_work_time"/>
+
+    <EditText
+        android:id="@+id/schedule_break_time"
+        android:inputType="number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_weight="0.75"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/schedule_work_time"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/schedule_work_time"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_work_time"
+        android:hint="@string/details_hint_break_time"/>
+
+    <EditText
+        android:id="@+id/schedule_intervals"
+        android:inputType="number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_weight="0.75"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/schedule_break_time"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/schedule_break_time"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_break_time"
+        android:hint="@string/details_hint_intervals"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintVertical_bias="0.822"
+        tools:layout_editor_absoluteX="16dp">
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:backgroundTint="@color/dark_grey"
+            android:textColor="@color/white"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:backgroundTint="@color/dark_grey"
+            android:textColor="@color/white"
+            android:text="@string/delete" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

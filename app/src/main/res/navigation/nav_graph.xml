@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/schedule_list_fragment">
+
+    <fragment
+        android:id="@+id/schedule_list_fragment"
+        android:name="com.example.pomodoro.ScheduleListFragment"
+        android:label="Schedule list"
+        tools:layout="@layout/schedule_list_fragment">
+        <action
+            android:id="@+id/action_schedule_list_fragment_to_schedule_details_fragment"
+            app:destination="@+id/schedule_details_fragment"
+            />
+        <action
+            android:id="@+id/action_schedule_list_fragment_to_schedule_active_fragment"
+            app:destination="@+id/schedule_active_fragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/schedule_details_fragment"
+        android:name="com.example.pomodoro.ScheduleDetailsFragment"
+        android:label="Schedule list"
+        tools:layout="@layout/schedule_details_fragment">
+        <action
+            android:id="@+id/action_schedule_details_fragment_to_schedule_list_fragment"
+            app:destination="@+id/schedule_list_fragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/schedule_active_fragment"
+        android:name="com.example.pomodoro.ScheduleActiveFragment"
+        android:label="Schedule list"
+        tools:layout="@layout/schedule_active_fragment">
+        <action
+            android:id="@+id/action_schedule_active_fragment_to_schedule_list_fragment"
+            app:destination="@+id/schedule_list_fragment"
+            />
+    </fragment>
+
+</navigation>
